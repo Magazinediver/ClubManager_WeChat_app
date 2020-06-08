@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "ClubItem": "../../components/ClubItem/ClubItem",
+    "ActivityItem" : "../../components/ActivityItem/ActivityItem",
+    "van-search": "@vant/weapp/search/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-panel": "@vant/weapp/panel/index"
+  },
+  "navigationBarTitleText": "搜索",
+  "navigationBarBackgroundColor": "#fff"
+}

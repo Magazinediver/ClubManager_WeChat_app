@@ -1,0 +1,401 @@
+
+page{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  overflow-y: scroll;
+  background-color: #111;
+}
+
+.goTop{
+  height: 120rpx;
+  width: 120rpx;
+  position: fixed;
+  bottom: 50rpx;
+  background: rgba(0,0,0,.3);
+  right: 30rpx;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+.follow{
+  background-color: #ffdd00;
+  height: 3.5vh;
+  width: 14vw;
+
+  margin: 0 auto;
+  margin-top: 10rpx;
+  text-align: center;
+  font-size: 2vh;
+  font-weight: bolder;
+  letter-spacing:1px;
+  line-height: 3.5vh;
+  border-radius: 2vh;
+}
+
+.image{
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 40%;
+  z-index: 0;
+}
+.panel{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow-y: scroll;
+  z-index: 1;
+  //主面板
+  .scroll-panel{
+    width: 100%;
+    height: 70vh;
+
+    margin-top: 25vh;
+    border-radius: 100rpx 100rpx 0 0;
+    background-color: #e2e2e2;
+
+    //社团模块
+    .club-container{
+      width: 100%;
+      height: 28vh;
+      overflow: hidden;
+      padding-top: 4vh;
+      padding-left:  4vh;
+      padding-right:  4vh;
+      padding-bottom: 1vh;
+      border-radius: 100rpx 100rpx 0 0;
+      background-color: #fff;
+      .club_item_content{
+        float: left;
+        .club_item_iconandtitle{
+          overflow: hidden;
+          margin-top: -5rpx;
+          .club_item_title{
+            margin-top: 0.5vh;
+            float: left;
+            font-size: 3.2vh;
+            font-weight: bold;
+          }
+          .club_item_icon{
+            float: right;
+            background-color: #ffe609;
+            margin-top: 1.5vh;
+            margin-left: 1vh;
+            padding: 5rpx 25rpx;
+            border-radius: 30rpx;
+    
+            color: #111;
+            font-size: 1.8vh;
+            font-weight: bolder;
+          }
+        }
+    
+        .club_item{
+          height: 50rpx;
+          .club_item_member{
+            float: left;
+            margin-top: 0.8vh;
+    
+            color: #323232;
+            font-size: 1.8vh;
+            line-height: 1.8vh;
+          }
+    
+          .club_item_fans{
+            float: left;
+            margin-top: 0.8vh;
+            margin-left: 1.5vh;
+            
+            color: #323232;
+            font-size: 1.8vh;
+            line-height: 1.8vh;
+          }
+        }
+    
+        .club_item_tab{
+          margin-top: 0rpx;
+          height: 50rpx;
+          .club_item_tab1{
+            float: left;
+            margin-left: -10rpx;
+            margin-top: 0.4vh;
+            padding: 0rpx 25rpx;
+            border-radius: 30rpx;
+            background-color: #d2d2d2;
+            color: #111;
+            font-size: 1.8vh;
+            
+          
+          }
+    
+          .club_item_tab2{
+            float: left;
+            margin-top: 0.4vh;
+            margin-left: 20rpx;
+            padding: 0rpx 25rpx;
+            border-radius: 30rpx;
+            background-color: #d2d2d2;
+            color: #111;
+            font-size: 1.8vh;
+          
+          }
+    
+          .club_item_tab3{
+            float: left;
+            margin-top: 0.4vh;
+            margin-left: 20rpx;
+            padding: 0rpx 25rpx;
+            border-radius: 30rpx;
+            background-color: #d2d2d2;
+            color: #111;
+            font-size: 1.8vh;
+           
+          }
+        }
+        
+      }
+      
+      .club_item_pic{
+        float: right;
+        margin-top: -10rpx;
+        margin-right: -10rpx;
+        image{
+        
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 90rpx;
+      }
+    
+    
+      }
+    
+      .club_describe{
+        float: left;
+        margin-top: 1vh;
+      
+        font-size: 1.8vh;
+        line-height: 2.8vh;
+        
+        
+      }
+    
+    }
+
+    //公告
+    .gonggao{
+
+      .gonggao-item{
+        
+        .icon{
+          margin-left: 20rpx;
+          padding-right: 20rpx;
+          .icon-pinglun{
+            color: rgb(25, 137, 250);
+          }
+        }
+      }
+      
+      
+    }
+  }
+
+  //副面板
+  .scroll-panel2{
+    overflow-y: scroll;
+    width: 100%;
+    height: 55vh;
+    background-color: #e2e2e2;
+
+    //用户模块
+    .member{
+      width: 100%;
+
+      margin-top: 20rpx;
+      background-color: #fff;
+      overflow: hidden;
+    
+      .van-cell-text{
+        height: 60rpx;
+        float: left;
+        align-items: center;
+        margin-left: 20rpx;
+        font-size: 45rpx;
+        font-weight: bold;
+        color: #000;
+        
+      }
+
+      .icon-canjiapeixun{
+        float: left;
+        height: 60rpx;
+        align-items: center;
+        font-size: 60rpx;
+        color: #ff8900;
+      }
+      .scroll-x-img{
+        
+        overflow-x: scroll;
+        white-space: nowrap;
+
+        .cell_pic{
+          margin-top: 10rpx;
+          margin-bottom: 20rpx;
+          display: inline-block;
+          margin-left: 30rpx;
+        
+  
+          width: 120rpx;
+          height: 120rpx;
+          border: 1rpx solid #aaa;
+          border-radius: 50%;
+        }
+      }
+
+      
+    }
+    
+    //社团列表
+    .activity-list{
+      width: 100%;
+
+      background-color: #ececec;
+      margin-top: 20rpx;
+      overflow: hidden;
+    
+      .van-cell-text{
+        height: 60rpx;
+        float: left;
+        align-items: center;
+        margin-top: 8rpx;
+        margin-left: 20rpx;
+        font-size: 45rpx;
+        font-weight: bold;
+        color: #000;
+        
+      }
+
+      .icon-huodong{
+        float: left;
+        height: 60rpx;
+        margin-top: 10rpx;
+        margin-left: 6rpx;
+        font-size: 50rpx;
+        color: rgb(25, 137, 250);
+      }
+      
+
+      
+    
+    }
+
+  }
+}
+
+.activity-container{
+  margin-bottom: 120rpx;
+}
+
+.activity_tab{
+  margin-top: 2rpx;
+ 
+  padding: 25rpx;
+  padding-bottom: 40rpx;
+  
+  background-color: #fff;
+  overflow: hidden;
+
+}
+
+.activity_img{
+  border-radius: 20rpx;
+  image{
+    width: 100%;
+    border-radius: 20rpx;
+  }
+}
+
+.activity_title{
+  margin-left: 10rpx;
+  text{
+    font-size: 60rpx;
+    color: #333;
+  }
+}
+
+.activity_time{
+  margin-left: 10rpx;
+  height: 40rpx;
+  margin-top: 20rpx;
+  color: #666;
+  display: flex;
+  .icon-shijian2{
+    display: flex;
+    align-items: center;
+    font-size: 35rpx;
+  }
+  .time{
+    display: flex; /*设置显示样式**/
+    align-items: center; /**子view垂直居中*/  
+    line-height: 27rpx;
+    margin-left: 10rpx;
+    font-size: 27rpx;
+  }
+}
+
+.activity_address{
+  float: left;
+  margin-left: 10rpx;
+  height: 10rpx;
+  margin-top: 20rpx;
+  display: flex;
+  color: #666;
+  .icon-didian{
+    display: flex;
+    align-items: center;
+    font-size: 35rpx;
+  }
+  .address{
+    display: flex; /*设置显示样式**/
+    align-items: center; /**子view垂直居中*/  
+    line-height: 27rpx;
+    margin-left: 10rpx;
+    font-size: 27rpx;
+  }
+}
+
+.sign{
+  float: right;
+  
+  text{
+    color: #FF9800;
+    font-size: 40rpx;
+    font-weight: bold;
+  }
+}
+
+.gonggao-item{
+  height: 1vh;
+}
+
+.van-notice-bar{
+  height: 1vh;
+  margin-top: 1rpx;
+  border-bottom: 0.3vh solid #ffe609;
+}
+
+.back{
+  width: 80rpx;
+  height: 60rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+
+  .icon{
+    margin-top: 5rpx;
+  }
+}

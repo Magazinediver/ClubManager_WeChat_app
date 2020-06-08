@@ -1,0 +1,102 @@
+<view class="activity-page">
+  <image 
+    mode="aspectFit"
+    class="top-image" 
+    src="https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg" 
+  />
+  <view class="join">
+    <view class="join-button" bindtap="">
+      我要报名
+    </view>
+  </view>
+   
+  <view class="container">
+    <van-tabs class="tabs" color="#ffc609" animated swipeable active="{{ active }}" bind:change="onChange">
+      <!-- 活动简介 -->
+      <van-tab class="tab" title="活动简介">
+        <!-- <image class="toutu" src="https://ae01.alicdn.com/kf/H307f710dbd6c4371aeeedd9cd4941d0ca.jpg" /> -->
+        <van-panel  use-footer-slot>
+          <view slot="header" class="header-jianjie">
+            <view class="title">我们一起开飞机</view>
+            <view class="status">火热进行中</view>
+          </view>
+          <view class="divider"></view>
+          <view slot="footer" class="footer-jianjie">
+            <view class="footer-title">活动细节</view>
+            <view class="activity-jianjie">
+              <view class="address">· 活动地址: 理四一楼</view>
+              <view class="time">· 活动时间: 2020-6-20</view>
+              <view class="contact">· 联系人: 黄sir 17306411528</view>
+              <view class="club">· 主办社团: 滑板社</view>
+            </view>
+           
+          </view>
+        </van-panel>
+      </van-tab>
+
+      <van-tab class="tab" title="活动详情">
+         <van-panel  use-footer-slot>
+          <view slot="header" class="header-xiangqing">
+            <view class="title">活动介绍</view>
+            <view class="descr">这是一个很好的活动</view>
+          </view>
+          <view class="divider"></view>
+          <view slot="footer" class="footer-xiangqing">
+            <view class="footer-title">活动须知</view>
+            <view class="activity-shouldnow">
+              <view class="shouldnow">这个活动只有群众才能参加</view>
+            </view>
+           
+          </view>
+        </van-panel>
+      </van-tab>
+
+      <!-- 社团 -->
+      <van-tab class="tab" title="社团">
+        <navigator
+          class="index_club_tab">
+            <view class="club_item_content">
+              <view class="club_item_iconandtitle">
+                <view class="club_item_title">
+                  {{clubItem.name}}
+                </view>
+                <view class="club_item_icon">
+                  {{clubItem.tag}}
+                </view>
+              </view>
+              
+              <view class="club_item">
+                <view class="club_item_member">
+                  成员:{{clubItem.member}}
+                </view>
+                <view class="club_item_fans">
+                  粉丝数:{{clubItem.fans}}
+                </view>
+              </view>
+              
+              <view class="club_item_tab">
+                <view class="club_item_tab1">
+                  {{clubItem.tips[0]}}
+                </view>
+                <view class="club_item_tab2">
+                  <text>{{clubItem.tips[1]}}</text>
+                </view>
+                <view class="club_item_tab3">
+                  <text>{{clubItem.tips[2]}}</text>
+                </view>
+              </view>
+              
+            </view>
+            <view class="club_item_pic">
+              <image class="club_item_pic_image" src="https://ae01.alicdn.com/kf/H307f710dbd6c4371aeeedd9cd4941d0ca.jpg" />
+            </view>
+            <view class="club_describe">
+              {{clubItem.describe}}
+            </view>
+          </navigator>
+      </van-tab>
+    </van-tabs>
+  </view>
+
+  
+</view>

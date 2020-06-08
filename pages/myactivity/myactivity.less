@@ -1,0 +1,86 @@
+page{
+  background-color: #ececec;
+}
+
+.activity_tab{
+  position: relative;
+  margin-bottom: 4rpx;
+  padding: 20rpx;
+  padding-bottom: 20rpx;
+  
+  background-color: #fff;
+  overflow: hidden;
+
+}
+
+.activity_img{
+  float: left;
+  border-radius: 20rpx;
+  image{
+    margin-top: 10rpx;
+    width: 45vw;
+    border-radius: 20rpx;
+  }
+}
+.right-container{
+  float: left;
+  .activity_title{
+    margin-left: 20rpx;
+    text{
+      font-size: 50rpx;
+      color: #333;
+    }
+  }
+  
+  .activity_time{
+    margin-left: 20rpx;
+    height: 30rpx;
+    margin-top: 10rpx;
+    color: #666;
+    display: flex;
+    .icon-shijian2{
+      display: flex;
+      align-items: center;
+      font-size: 30rpx;
+    }
+    .time{
+      display: flex; /*设置显示样式**/
+      line-height: 27rpx;
+      margin-left: 10rpx;
+      font-size: 27rpx;
+    }
+  }
+  
+  .activity_address{
+    float: left;
+    margin-left: 20rpx;
+    height: 30rpx;
+    margin-top: 10rpx;
+    display: flex;
+    color: #666;
+    .icon-didian{
+      display: flex;
+      align-items: center;
+      font-size: 30rpx;
+    }
+    .address{
+      display: flex; /*设置显示样式**/
+      line-height: 30rpx;
+      margin-left: 10rpx;
+      font-size: 27rpx;
+    }
+  }
+  
+  .sign{
+    position: absolute;
+    bottom: 25rpx;
+    // left: 375rpx;
+    right: 20rpx;
+    text{
+      color: #FF9800;
+      font-size: 30rpx;
+      font-weight: bold;
+    }
+}
+
+}

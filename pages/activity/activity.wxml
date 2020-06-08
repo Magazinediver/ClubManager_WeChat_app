@@ -1,0 +1,83 @@
+<!--pages/playground/playground.wxml-->
+<NavBar home="true" bindhome="handlerGohomeClick">>
+  <!-- <view slot="left">
+    <image class="nav_logo" src="https://ae01.alicdn.com/kf/Haf62952e124f457898b23d443d477a17b.jpg" />
+  </view> -->
+  <view slot="center" class="nav_text">
+    <image class="nav_logo" src="https://ae01.alicdn.com/kf/Haf62952e124f457898b23d443d477a17b.jpg" />
+    活动
+  </view>
+  <!-- <view slot="right" class="nav_text">
+    <text class="iconfont icon-sousuo"></text>
+  </view> -->
+</NavBar>
+<image src='https://ae01.alicdn.com/kf/H6a3b4fa2ab4d4848a48e8443a9bce896G.jpg' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+
+<view >
+  <!-- <text class="nav_buttom"></text> -->
+</view>
+<view class="playground">
+
+  <view class="index_swiper" id="swiper">
+    <swiper
+      autoplay
+      indicator-dots
+      circular
+    >
+      <swiper-item
+        wx:for="{{swiperList}}"
+        wx:key="goods_id"
+      >
+        <navigator>
+          <image mode="widthFix" src="{{item.image_src}}" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  
+    <view class="tabs {{tabFix}}"  id="navbar" style="position: sticky;top:{{swiperTop}}px;">
+      <view class="tabs_title">
+        <view 
+        wx:for="{{tabs}}"
+        wx:key="id"
+        class="title_item {{index===currentIndexNav?'active':''}}"
+        bindtap="activeNav"
+        data-index="{{index}}"
+        >
+          {{item.name}}
+        </view>
+      </view>
+      <view class="tab_buttom"></view>
+    </view>
+    
+    
+    <!-- <view class="tabs">
+      <scroll-view scroll-x="true" class="tabs_title {{isFixedTop?'fixed':''}}"  id="navbar">
+        <view 
+        wx:for="{{tabs}}"
+        wx:key="id"
+        class="title_item {{index===currentIndexNav?'active':''}}"
+        bindtap="activeNav"
+        data-index="{{index}}"
+        >
+          {{item.name}}
+        </view>
+      </scroll-view>
+      <view class="title_item_z" wx:if="{{isFixedTop}}"></view>
+    </view> -->
+
+  
+  <!-- <ActivityItem activityitem="{{activityItem}}"></ActivityItem> -->
+  <!-- <ClubItem clubitem="{{clubItem}}"></ClubItem> -->
+
+  <swiper current="{{currentIndexNav}}" class="tab-box" style="height:{{activityheight}}rpx" duration="300" bindchange="switchTab">
+    <swiper-item
+    wx:for="{{tabs}}"
+    wx:key="id"
+    class="tab_content">
+      <ActivityItem activityitem="{{activityItem}}"></ActivityItem>
+    </swiper-item>
+  </swiper>
+</view>
+

@@ -1,0 +1,43 @@
+
+<navigator
+  url="/pages/clubpage/clubpage"
+  class="index_club_tab"
+  wx:for="{{clubItem}}"
+  wx:key="index">
+    <view class="club_item_content">
+      <view class="club_item_iconandtitle">
+        <view class="club_item_title">
+          {{item.name}}
+        </view>
+        <view class="club_item_icon">
+          {{item.tag}}
+        </view>
+      </view>
+      
+      <view class="club_item">
+        <view class="club_item_member">
+          成员:{{item.member}}
+        </view>
+        <view class="club_item_fans">
+          粉丝数:{{item.fans}}
+        </view>
+      </view>
+      
+      <view class="club_item_tab">
+        <view class="club_item_tab1">
+          {{item.tips[0]}}
+        </view>
+        <view class="club_item_tab2">
+          <text>{{item.tips[1]}}</text>
+        </view>
+        <view class="club_item_tab3">
+          <text>{{item.tips[2]}}</text>
+        </view>
+      </view>
+      
+    </view>
+    <view class="club_item_pic">
+      <image class="club_item_pic_image" src="https://ae01.alicdn.com/kf/H307f710dbd6c4371aeeedd9cd4941d0ca.jpg" />
+    </view>
+   
+  </navigator>

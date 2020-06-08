@@ -1,0 +1,54 @@
+<view class="search">
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入搜索关键词"
+    show-action
+    shape="round"
+    bind:search="onSearch"
+    bind:cancel="onCancel"
+    class="search_input"
+  />
+  <view wx:if="{{searchList.length == 0}}" class="search_container">
+    <view class="hot_search_panel">
+      <view class="hot_search">热门搜索</view>
+      <van-divider customStyle="margin-top: 10rpx;margin-buttom:0rpx"/>
+      <view class="item_container">
+        <view class="hot_search_item" wx:for="{{hot}}" wx:key="index">
+          {{item}}
+        </view>
+      </view>
+    </view>
+
+    <view class="history_panel">
+      <view class="history">历史搜索</view>
+      <van-divider customStyle="margin-top: 10rpx;margin-buttom:0rpx"/>
+      <view class="item_container">
+        <view class="history_item" wx:for="{{history}}" wx:key="index">
+          {{item}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else class="result_container">
+    <view class="index_tab">
+      <text class="index_club {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="clickTab">社团</text>
+      <text class="index_act {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="clickTab">活动</text>
+    </view>
+
+    <swiper current="{{currentTab}}" class="tab-box" style="height:87vh" duration="300" bindchange="switchTab">
+      <swiper-item class="tab_content">
+        <scroll-view scroll-y="{{true}}" class="result_scroll">
+          <ClubItem class="item" clubitem="{{searchList.clubItem}}"></ClubItem>
+        </scroll-view> 
+      </swiper-item>
+
+      <swiper-item class="tab_content">
+        <view scroll-y="{{true}}" class="result_scroll">
+          <ActivityItem activityitem="{{searchList.activityItem}}"></ActivityItem>
+        </view>
+      </swiper-item>
+    </swiper>
+    
+  </view>
+</view>

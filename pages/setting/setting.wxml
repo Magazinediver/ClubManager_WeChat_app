@@ -1,0 +1,86 @@
+<view class="container">
+  <button class="logout" type="default" bindtap="logout">退出登录</button>
+  <!-- <view class="logout">退出登录</view> -->
+<view class="user_info_wrap">
+  <view wx:if="{{userinfo.avatarUrl}}" class="user_img_wrap">
+    <!-- <image mode="scaleToFill" class="user_bg" src="{{userinfo.avatarUrl}}"></image> -->
+    <view class="user_info">
+      <image class="user_icon" src="{{userinfo.avatarUrl}}"></image>
+      <view class="user_name">#{{userinfo.nickName}}</view>
+      <view class="user_address">{{userinfo.city}},{{userinfo.province}}</view>
+    </view>
+  </view>
+  <view wx:else class="login_img_wrap">
+    <view class="login_info">
+      <image class="login_icon" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg"></image>
+      <view class="login_btn">
+        <navigator class="login" url="/pages/login/login">登录/注册</navigator>
+      </view>
+    </view>
+  </view>
+  <van-row>
+    <van-col span="8">
+      <view class="set_tab">
+        <view class="tab_num">0</view>
+        <view class="tab_text">社团</view>
+      </view>
+    </van-col>
+    <van-col span="8">
+      <view class="set_tab">
+        <view class="tab_num">0</view>
+        <view class="tab_text">关注</view>
+      </view>
+    </van-col>
+    <van-col span="8">
+      <view class="set_tab">
+        <view class="tab_num">0</view>
+        <view class="tab_text">活动数</view>
+      </view>
+    </van-col>
+  </van-row>
+  <scroll-view class="set_index">
+    <van-cell
+    is-link
+    link-type="navigateTo"
+    url="/pages/myclub/myclub"
+    >
+    <text slot="icon" class="iconfont icon-canjiapeixun"></text>
+    <text slot="title" class="slot_text">我的社团</text>
+    </van-cell>
+    <view class="cell_group"></view>
+    <van-cell-group>
+      <van-cell
+        is-link
+        link-type="navigateTo"
+        url="/pages/myactivity/myactivity">
+        <text slot="icon" class="iconfont icon-tuandui-tianchong"></text>
+        <text slot="title" class="slot_text">我参与的活动</text>
+      </van-cell>
+      <van-cell
+        is-link
+        link-type="navigateTo"
+        url="/pages/dashboard/index">
+        <text slot="icon" class="iconfont icon-A"></text>
+        <text slot="title" class="slot_text">我的关注</text>
+      </van-cell>
+      <van-cell
+        is-link
+        link-type="navigateTo"
+        url="/pages/dashboard/index">
+        <text slot="icon" class="iconfont icon-pinglun"></text>
+        <text slot="title" class="slot_text">我的评论</text>
+      </van-cell>
+    </van-cell-group>
+    <van-cell
+      is-link
+      link-type="navigateTo"
+      value="修改个人信息"
+      url="/pages/userinfo/userinfo">
+      <text slot="icon" class="iconfont icon-ren-"></text>
+      <text slot="title" class="slot_text">个人信息</text>
+    </van-cell>
+    
+    
+  </scroll-view>
+</view>
+</view>

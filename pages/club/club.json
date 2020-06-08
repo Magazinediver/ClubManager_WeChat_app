@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "ClubItem": "../../components/ClubItem/ClubItem",
+    "ActivityItem" : "../../components/ActivityItem/ActivityItem",
+    "NavBar" : "../../components/navBar/navBar",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-sticky": "@vant/weapp/sticky/index"
+  },
+  "navigationBarTitleText": "社团",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationStyle": "custom"
+}

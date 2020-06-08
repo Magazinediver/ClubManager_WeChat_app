@@ -1,0 +1,14 @@
+<view class="logo_content">
+  <image class="logo_logo" src="https://ae01.alicdn.com/kf/H63d6e10b0f184211adff9e4d13dbbaedS.jpg" />
+  <text class="logo_text">社团家</text>
+</view>
+
+
+<button class="login_button" style="width: 680rpx;height: 90rpx;" open-type="getUserInfo" bindgetuserinfo="handlegetUserInfo"> 社团家登录 </button>
+
+<view class="register"> 新用户注册 </view>
+
+<view class="login_contract"> 
+  <text class="login_con_1" >登录代表您已同意</text>
+  <text class="login_con_2" >社团家用户协议、隐私协议</text>
+</view>

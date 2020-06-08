@@ -1,0 +1,97 @@
+<NavBar background="" >
+  <view class="back" slot="left" bind:click="goback">
+    <van-icon class="icon" size="50rpx" name="arrow-left" bind:click="goback" />
+  </view>
+  <view slot="right" class="follow">关注</view>
+</NavBar>
+<image src='https://ae01.alicdn.com/kf/H11d9eb39fe6945cd8479a49d124a94a0s.jpg' class='goTop' bindtap=""></image>
+<image mode="scaleToFill" class="image" src="https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg" />
+<!-- 承载面板 -->
+<view class="panel">
+  <!-- 滑动面板 -->
+  <view class="scroll-panel">
+    <!-- 社团信息模块 -->
+    <view class="club-container">
+      <view class="club_item_content">
+        <view class="club_item_iconandtitle">
+          <view class="club_item_title">{{clubItem.name}}</view>
+          <view class="club_item_icon">{{clubItem.tag}}</view>
+        </view>
+        <view class="club_item">
+          <view class="club_item_member">成员:{{clubItem.member}}</view>
+          <view class="club_item_fans">粉丝数:{{clubItem.fans}}</view>
+        </view>
+        <view class="club_item_tab">
+          <view class="club_item_tab1">{{clubItem.tips[0]}}</view>
+          <view class="club_item_tab2">
+            <text>{{clubItem.tips[1]}}</text>
+          </view>
+          <view class="club_item_tab3">
+            <text>{{clubItem.tips[2]}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="club_item_pic">
+        <image class="club_item_pic_image" src="https://ae01.alicdn.com/kf/H307f710dbd6c4371aeeedd9cd4941d0ca.jpg" />
+      </view>
+      <view class="club_describe">{{clubItem.describe}}</view>
+    </view>
+    <view class="gonggao">
+      <van-notice-bar class="gonggao-item" color="#0D87E1" backgroundColor="#fff" text="{{ text }}" speed="{{40}}">
+        <view slot="left-icon" class="icon">
+          <text class="iconfont icon-pinglun"></text>
+        </view>
+      </van-notice-bar>
+    </view>
+    <scroll-view scroll-y="{{true}}" class="scroll-panel2">
+      <!-- 用户模块 -->
+      <view class="member">
+        <van-cell is-link link-type="navigateTo" url="/pages/dashboard/index">
+          <view slot="title">
+            <view class="van-cell-text">镇站之宝</view>
+            <view class="iconfont icon-canjiapeixun"></view>
+          </view>
+        </van-cell>
+        <scroll-view scroll-x="{{true}}" class="scroll-x-img">
+          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
+          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
+          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
+          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
+          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
+          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
+        </scroll-view>
+      </view>
+
+      <!-- 活动列表 -->
+      <view class="activity-list">
+        <van-cell is-link link-type="navigateTo" url="/pages/dashboard/index">
+          <view slot="title">
+            <view class="van-cell-text">活动</view>
+            <view class="iconfont icon-huodong"></view>
+          </view>
+        </van-cell>
+        <view class="activity-container">
+          <navigator class="activity_tab" wx:for="{{activityItem}}" wx:key="index">
+            <view class="activity_img">
+              <image class="activity_image" mode="widthFix" src="{{item.pic}}" />
+            </view>
+            <view class="activity_title">
+              <text class="activity_title_text">{{item.name}}</text>
+            </view>
+            <view class="activity_time">
+              <text class="iconfont icon-shijian2"></text>
+              <text class="time">{{item.time}}</text>
+            </view>
+            <view class="activity_address">
+              <text class="iconfont icon-didian"></text>
+              <text class="address">{{item.address}}</text>
+            </view>
+            <view class="sign">
+              <text class="sign_text">{{item.status}}</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
