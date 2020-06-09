@@ -2,7 +2,10 @@
   <view class="id-name-group">
     <van-cell-group>
       <van-field
-        value="{{ username }}"
+        name="name"
+        value="{{ name }}"
+        bind:change="onChange"
+        data-prop="name"
         required
         clearable
         label="真实姓名"
@@ -10,7 +13,10 @@
       />
 
       <van-field
-        value="{{ password }}"
+        name="id"
+        value="{{ id }}"
+        bind:change="onChange"
+        data-prop="id"
         clearable
         type="number"
         label="学号"
@@ -19,6 +25,8 @@
         border="{{ false }}"
       />
     </van-cell-group>
+
+    <button class="confirm-userinfo" type="primary" bindtap="handleUserinfo">提交信息</button>
   </view>
   
 </view>

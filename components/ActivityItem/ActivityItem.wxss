@@ -138,14 +138,14 @@
 .activity_img {
   border-radius: 20rpx;
 }
-.activity_img image {
+.activity_image {
   width: 100%;
   border-radius: 20rpx;
 }
 .activity_title {
   margin-left: 10rpx;
 }
-.activity_title text {
+.activity_title_text {
   font-size: 60rpx;
   color: #333;
 }
@@ -195,7 +195,7 @@
 .sign {
   float: right;
 }
-.sign text {
+.sign_text {
   color: #FF9800;
   font-size: 40rpx;
   font-weight: bold;

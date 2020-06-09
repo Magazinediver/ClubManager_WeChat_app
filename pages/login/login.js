@@ -3,6 +3,7 @@ import { request } from "../../request/index.js"
 
 Page({
 
+  
   /**
    * 页面的初始数据
    */
@@ -10,6 +11,7 @@ Page({
 
   },
 
+  
 
   handlegetUserInfo(e){
     const {userInfo} = e.detail;
@@ -27,7 +29,7 @@ Page({
           },
           method:"GET",
           success:function(res){
-            console.log("用户的openid: " + res.data.openid);
+            // console.log("用户的openid: " + res.data.openid);
             const { openid } = res.data
             wx.setStorageSync("openid",openid);
             // var app=getApp();     // 取得全局App
@@ -36,20 +38,21 @@ Page({
         })
       },
     });
+     
+    let userinfo = wx.getStorageInfoSync("userinfo");
+    // console.log(userinfo)
+    request({ url: '/login',
+      data:userinfo
+    })
+    .then(res=> {
+      
+    })
+    
     setTimeout(() => {
       wx.switchTab({
         url: '/pages/index/index',
       });
-    }, 200);
-    
-    
+    }, 400);  
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
 
 })

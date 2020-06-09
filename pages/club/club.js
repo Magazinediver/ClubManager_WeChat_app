@@ -163,14 +163,14 @@ Page({
     //获取tab的距离顶部高度
     const query = wx.createSelectorQuery();
     query.select('#swiper').boundingClientRect(function (res) {
-      console.log(res.top)
+      // console.log(res.top)
       // that.data.swiperTop = res.top
       that.setData({
         swiperTop: res.top
       })
     }).exec();
     query.select('#navbar').boundingClientRect(function (res) {
-      console.log(res.top)
+      // console.log(res.top)
       // that.data.tabTop = res.top
       that.setData({
         tabTop: res.top

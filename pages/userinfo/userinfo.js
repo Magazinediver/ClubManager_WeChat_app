@@ -1,20 +1,39 @@
 // pages/userinfo/userinfo.js
+import { request } from "../../request/index.js"
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name: '',
-    id: ''
+    name: "",
+    id: ""
   },
 
-  getSwiperList() {
-    request({ url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata' })
-      .then(result => {
-        this.setData({
-          swiperList: result.data.message
-        })
-      })
+  onChange(e) {
+    this.setData({
+      [e.currentTarget.dataset.prop] : e.detail
+    })
   },
+
+  handleUserinfo(){
+    
+    wx.setStorageSync("name", this.data.name);
+    wx.setStorageSync("id", this.data.id);
+    request({ url: '/userinfo',
+      data:{
+        name:this.name,
+        id:this.id
+      }
+    })
+      .then(res => {
+        
+      })
+    wx.switchTab({
+      url: '/pages/setting/setting',
+    });
+  },
+
+  
 })

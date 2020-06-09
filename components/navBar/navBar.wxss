@@ -1,4 +1,4 @@
-view,
+/* view,
 text,
 scroll-view,
 input,
@@ -8,11 +8,12 @@ cover-view {
   box-sizing: border-box;
 }
 page {
-  --height: 44px; /* 4*2+32 */
-  --right: 97px; /* 10+87 */
+  --height: 44px;
+  --right: 97px; 
   --navBarExtendHeight: 4px;
   box-sizing: border-box;
-}
+} */
+
 .lxy-nav-bar .ios {
   --height: 44px; /* 4*2+32 */
   --right: 97px; /* 10+87 */

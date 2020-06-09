@@ -6,5 +6,12 @@
   background-color: #f2f2f2;
 }
 .container .id-name-group {
+  padding-top: 5vh;
+}
+.container .confirm-userinfo {
   margin-top: 5vh;
+  color: #fff;
+  background-color: #ffc609;
+  width: 90vw;
+  height: 90rpx;
 }
