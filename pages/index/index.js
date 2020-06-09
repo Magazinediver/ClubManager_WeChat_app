@@ -155,23 +155,20 @@ Page({
 
   //options(Object)
   onLoad: function (options) {
-    // var reqTask = wx.request({
-    //   url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata',
-    //   success: (result)=>{
-    //     // console.log(result);
-    //     this.setData({
-    //       swiperList:result.data.message
-    //     })
-    //   },
-    //   // fail: ()=>{},
-    //   // complete: ()=>{}
-    // });
 
     this.getSwiperList()
-    this.getCateList()
+   
+
     this.setcHeight()
     this.setaHeight()
   },
+
+  onShow(){
+    this.getUserClubList()
+    this.getUserActivityList()
+  },
+
+
   setaHeight() {
     var that = this;
     this.setData({ activityheight: this.data.activityItem.length * 750 })
@@ -213,8 +210,7 @@ Page({
 
   getSwiperList() {
     request({ 
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata',
-      data:this.clubheight
+      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata'
     })
       .then(result => {
         this.setData({
@@ -223,16 +219,29 @@ Page({
       })
   },
 
-  getCateList() {
-    request({ url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/catitems',
-    data:this.data.clubItem
-  })
+  getUserActivityList(){
+    request({ 
+      url: '/useractivity',
+    })
       .then(result => {
         this.setData({
-          cateList: result.data.message
+          activityItem: result.data.activityItem
         })
       })
   },
+    
+  getUserClubList(){
+    request({ 
+      url: '/userclub',
+    })
+      .then(result => {
+        this.setData({
+          clubItem: result.data.clubItem
+        })
+      })
+  },
+
+
 
   onPageScroll: function (e) {
     if (e.scrollTop > 100) {

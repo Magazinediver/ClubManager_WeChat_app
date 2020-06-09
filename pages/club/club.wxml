@@ -27,16 +27,16 @@
     >
       <swiper-item
         wx:for="{{swiperList}}"
-        wx:key="goods_id"
+        wx:key="index"
       >
         <navigator>
-          <image mode="widthFix" src="{{item.image_src}}" />
+          <image mode="widthFix" src="{{item}}" />
         </navigator>
       </swiper-item>
     </swiper>
   </view>
 
-  
+  <!-- scroll-left="{{currentIndexNav * 18}}" -->
     <view class="tabs {{tabFix}}"  id="navbar" style="position: sticky;top:{{swiperTop}}px;">
       <scroll-view scroll-x="true" scroll-left="{{currentIndexNav * 18}}" class="tabs_title">
         <view 
@@ -67,11 +67,32 @@
   <!-- <ClubItem clubitem="{{clubItem}}"></ClubItem> -->
 
   <swiper current="{{currentIndexNav}}" class="tab-box" style="height:{{clubheight}}rpx" duration="300" bindchange="switchTab">
-    <swiper-item
-    wx:for="{{tabs}}"
-    wx:key="id"
-    class="tab_content">
-      <ClubItem clubitem="{{clubItem}}"></ClubItem>
+    <swiper-item class="tab_content">
+      <ClubItem clubitem="{{all}}"></ClubItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ClubItem clubitem="{{hobby}}"></ClubItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ClubItem clubitem="{{game}}"></ClubItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ClubItem clubitem="{{art}}"></ClubItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ClubItem clubitem="{{organ}}"></ClubItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ClubItem clubitem="{{volun}}"></ClubItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ClubItem clubitem="{{comic}}"></ClubItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ClubItem clubitem="{{study}}"></ClubItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ClubItem clubitem="{{sport}}"></ClubItem>
     </swiper-item>
   </swiper>
 

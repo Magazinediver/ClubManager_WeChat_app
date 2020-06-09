@@ -1,3 +1,4 @@
+import { request } from "../../request/index.js"
 // pages/activitypage/activitypage.js
 Page({
 
@@ -5,7 +6,18 @@ Page({
    * 页面的初始数据
    */
   data: {
+    activityid:'',
     active: 0,
+    activityItem:{
+      title:'我们一起开飞机',
+      status:'火热进行中',
+      address:'理四一楼',
+      time:'2020-6-20',
+      contact:'黄sir 17306411528',
+      club:'滑板社',
+      describe:'这是一个很好的活动',
+      attention:'这个活动只有群众才能参加'
+    },
     clubItem:
       {
         name: '流云梦社',
@@ -17,7 +29,44 @@ Page({
       },
   },
 
-  onChange(event) {
+
+  onLoad:function(options){
+    // console.log(options)
     
+    let i = options.activityid
+    // console.log(i);
+    
+    this.setData({
+      activityid : i
+    })
+    // console.log(this.data.activityid);
+
+    this.getData()
   },
+
+  join(){
+    request({ 
+      url: '/joinactivity'
+    })
+      .then(result => {
+        
+      })
+
+  },
+
+  getData() {
+    request({ 
+      url: '/activitydetail',
+      data:{
+        activityid:this.data.activityid
+      }
+    })
+      .then(result => {
+        this.setData({
+          clubItem: result.data.clubItem,
+          activityItem: result.data.activityItem
+        })
+      })
+  },
+
 })

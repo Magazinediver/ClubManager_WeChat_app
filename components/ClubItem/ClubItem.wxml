@@ -1,7 +1,7 @@
 
 <view class="container">
   <navigator
-  url="/pages/clubpage/clubpage"
+  url="/pages/clubpage/clubpage?clubname={{item.name}}"
   class="index_club_tab"
   wx:for="{{clubitem}}"
   wx:key="index">

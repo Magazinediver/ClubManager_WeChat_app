@@ -3,9 +3,6 @@ Page({
 
   
   data: {
-    queryInfo:{
-      user:[],
-    },
     clubItem: [
       {
         name: '流云梦社',
@@ -50,20 +47,16 @@ Page({
     ]
   },
   onLoad: function (options) {
-    this.getMyClubList()
+    this.getUserClubList()
   },
-  getMyClubList() {
-    var that = this
-    request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata',
-      data:{
-        queryInfo:that.data.queryInfo
-      },
+  getUserClubList(){
+    request({ 
+      url: '/userclub',
     })
       .then(result => {
         this.setData({
-          // clubItem: result.data.message
+          clubItem: result.data.clubItem
         })
       })
-  }
+  },
 })

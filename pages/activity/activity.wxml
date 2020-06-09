@@ -26,10 +26,10 @@
     >
       <swiper-item
         wx:for="{{swiperList}}"
-        wx:key="goods_id"
+        wx:key="index"
       >
         <navigator>
-          <image mode="widthFix" src="{{item.image_src}}" />
+          <image mode="widthFix" src="{{item}}" />
         </navigator>
       </swiper-item>
     </swiper>
@@ -72,11 +72,20 @@
   <!-- <ClubItem clubitem="{{clubItem}}"></ClubItem> -->
 
   <swiper current="{{currentIndexNav}}" class="tab-box" style="height:{{activityheight}}rpx" duration="300" bindchange="switchTab">
-    <swiper-item
-    wx:for="{{tabs}}"
-    wx:key="id"
-    class="tab_content">
-      <ActivityItem activityitem="{{activityItem}}"></ActivityItem>
+    <swiper-item class="tab_content">
+      <ActivityItem activityitem="{{all}}"></ActivityItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ActivityItem activityitem="{{hobby}}"></ActivityItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ActivityItem activityitem="{{study}}"></ActivityItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ActivityItem activityitem="{{charity}}"></ActivityItem>
+    </swiper-item>
+    <swiper-item class="tab_content">
+      <ActivityItem activityitem="{{sports}}"></ActivityItem>
     </swiper-item>
   </swiper>
 </view>

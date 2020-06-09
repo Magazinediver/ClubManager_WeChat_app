@@ -5,29 +5,29 @@
     src="https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg" 
   />
   <view class="join">
-    <view class="join-button" bindtap="">
+    <view class="join-button" bindtap="join">
       我要报名
     </view>
   </view>
    
   <view class="container">
-    <van-tabs class="tabs" color="#ffc609" animated swipeable active="{{ active }}" bind:change="onChange">
+    <van-tabs class="tabs" color="#ffc609" animated swipeable active="{{ active }}" >
       <!-- 活动简介 -->
       <van-tab class="tab" title="活动简介">
         <!-- <image class="toutu" src="https://ae01.alicdn.com/kf/H307f710dbd6c4371aeeedd9cd4941d0ca.jpg" /> -->
         <van-panel  use-footer-slot>
           <view slot="header" class="header-jianjie">
-            <view class="title">我们一起开飞机</view>
-            <view class="status">火热进行中</view>
+            <view class="title">{{activityItem.title}}</view>
+            <view class="status">{{activityItem.status}}</view>
           </view>
           <view class="divider"></view>
           <view slot="footer" class="footer-jianjie">
             <view class="footer-title">活动细节</view>
             <view class="activity-jianjie">
-              <view class="address">· 活动地址: 理四一楼</view>
-              <view class="time">· 活动时间: 2020-6-20</view>
-              <view class="contact">· 联系人: 黄sir 17306411528</view>
-              <view class="club">· 主办社团: 滑板社</view>
+              <view class="address">· 活动地址: {{activityItem.address}}</view>
+              <view class="time">· 活动时间: {{activityItem.time}}</view>
+              <view class="contact">· 联系人: {{activityItem.contact}}</view>
+              <view class="club">· 主办社团: {{activityItem.club}}</view>
             </view>
            
           </view>
@@ -38,13 +38,13 @@
          <van-panel  use-footer-slot>
           <view slot="header" class="header-xiangqing">
             <view class="title">活动介绍</view>
-            <view class="descr">这是一个很好的活动</view>
+            <view class="descr">{{activityItem.describe}}</view>
           </view>
           <view class="divider"></view>
           <view slot="footer" class="footer-xiangqing">
             <view class="footer-title">活动须知</view>
             <view class="activity-shouldnow">
-              <view class="shouldnow">这个活动只有群众才能参加</view>
+              <view class="shouldnow">{{ activityItem.attention}}</view>
             </view>
            
           </view>

@@ -4,7 +4,7 @@
   </view>
   <view slot="right" class="follow">关注</view>
 </NavBar>
-<image src='https://ae01.alicdn.com/kf/H11d9eb39fe6945cd8479a49d124a94a0s.jpg' class='goTop' bindtap=""></image>
+<image src='https://ae01.alicdn.com/kf/H11d9eb39fe6945cd8479a49d124a94a0s.jpg' class='goTop' bindtap="join"></image>
 <image mode="scaleToFill" class="image" src="https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg" />
 <!-- 承载面板 -->
 <view class="panel">
@@ -37,7 +37,7 @@
       <view class="club_describe">{{clubItem.describe}}</view>
     </view>
     <view class="gonggao">
-      <van-notice-bar class="gonggao-item" color="#0D87E1" backgroundColor="#fff" text="{{ text }}" speed="{{40}}">
+      <van-notice-bar class="gonggao-item" color="#0D87E1" backgroundColor="#fff" text="{{ clubItem.notice }}" speed="{{40}}">
         <view slot="left-icon" class="icon">
           <text class="iconfont icon-pinglun"></text>
         </view>
@@ -46,32 +46,29 @@
     <scroll-view scroll-y="{{true}}" class="scroll-panel2">
       <!-- 用户模块 -->
       <view class="member">
-        <van-cell is-link link-type="navigateTo" url="/pages/dashboard/index">
+        <van-cell>
           <view slot="title">
             <view class="van-cell-text">镇站之宝</view>
             <view class="iconfont icon-canjiapeixun"></view>
           </view>
         </van-cell>
         <scroll-view scroll-x="{{true}}" class="scroll-x-img">
-          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
-          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
-          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
-          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
-          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
-          <image class="cell_pic" src="https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg" />
+          <image wx:for="{{userpic}}" wx:key="index" class="cell_pic" src="{{item}}" />
         </scroll-view>
       </view>
 
       <!-- 活动列表 -->
       <view class="activity-list">
-        <van-cell is-link link-type="navigateTo" url="/pages/dashboard/index">
+        <van-cell>
           <view slot="title">
             <view class="van-cell-text">活动</view>
             <view class="iconfont icon-huodong"></view>
           </view>
         </van-cell>
         <view class="activity-container">
-          <navigator class="activity_tab" wx:for="{{activityItem}}" wx:key="index">
+          <navigator class="activity_tab" wx:for="{{activityItem}}" wx:key="index"
+            url="/pages/activitypage/activitypage?activityid={{item.id}}"
+          >
             <view class="activity_img">
               <image class="activity_image" mode="widthFix" src="{{item.pic}}" />
             </view>

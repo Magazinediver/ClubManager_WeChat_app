@@ -18,58 +18,237 @@ Page({
     navbarInitTop: 0, //导航栏初始化距顶部的距离
     isFixedTop: false, //是否固定顶部
 
-    swiperList: [],
+    swiperList: [
+      'https://ae01.alicdn.com/kf/H06978a26753d4c07bf899f39aef2949bf.jpg',
+      'https://ae01.alicdn.com/kf/H54a7061e839f4d7c9ddc5679868b89f7l.jpg',
+      'https://ae01.alicdn.com/kf/H0fd06a63db814c67a6160bdd8fa1ea1ag.jpg',
+      'https://ae01.alicdn.com/kf/Hefdf7d749bdd46ef8f1685f87bd72b74E.jpg',
+    ],
     //被点击的导航条索引
     currentIndexNav: 0,
     //导航条数据
-    clubItem: [{
-      name: '流云梦社',
-      tag: '热门社团',
-      member: '70',
-      fans: '200',
-      tips: ['动漫', '颜值', 'cosplay'],
-      describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
-    },
-    {
-      name: '流云梦社',
-      tag: '热门社团',
-      member: '70',
-      fans: '200',
-      tips: ['动漫', '颜值', 'cosplay'],
-      describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
-    },
-    {
-      name: '流云梦社',
-      tag: '热门社团',
-      member: '70',
-      fans: '200',
-      tips: ['动漫', '颜值', 'cosplay'],
-      describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
-    },
-    {
-      name: '流云梦社',
-      tag: '热门社团',
-      member: '70',
-      fans: '200',
-      tips: ['动漫', '颜值', 'cosplay'],
-      describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
-    }
+  
+    all:[
+      {
+        name: '全部社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '全部社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '全部社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '全部社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '全部社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '全部社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
     ],
-    activityItem: [{
-      name: '义务维修会',
-      pic: 'https://ae01.alicdn.com/kf/H02612ad5ca404b42955d6e6a3a037694r.jpg',
-      time: '2019年11月24日 9:00～11:00',
-      address: '教四一楼',
-      status: '火热报名中！'
-    },
-    {
-      name: '招新游园会',
-      pic: 'https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg',
-      time: '2019年11月20日 9:00～19:00',
-      address: '北校区音乐广场',
-      status: '报名已截止'
-    }
+    hobby:[
+      {
+        name: '兴趣社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '兴趣社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '兴趣社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '兴趣社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
     ],
+    game:[
+      {
+        name: '游戏社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '游戏社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '游戏社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+    ],
+    art:[
+      {
+        name: '艺术社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '艺术社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+    ],
+    organ:[
+      {
+        name: '组织社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '组织社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+    ],
+    volun:[
+      {
+        name: '志愿社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '志愿社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+    ],
+    comic:[
+      {
+        name: '动漫社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '动漫社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+    ],
+    study:[
+      {
+        name: '学术社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '学术社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+    ],
+    sport:[
+      {
+        name: '全部社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+      {
+        name: '全部社',
+        tag: '热门社团',
+        member: '70',
+        fans: '200',
+        tips: ['动漫', '颜值', 'cosplay'],
+        describe: '学生社团（英答文名：students society），是指学生为了实现会员的共同意愿和满足个人兴趣爱好的需求、专自愿组成的、按照其章程开展活动的群众性学生组织。学生社团是我国校园文化建设的重要载体，是我国高校第二课堂的引领者属。',
+      },
+    ],
+
+    // tab:["all","hobby","game","art","organ","volun","comic","study","sport"],
+    
     tabs: [{
       name: '全部',
       isActive: true
@@ -116,14 +295,34 @@ Page({
     ]
   },
 
+
   setcHeight() {
-    var that = this;
-    this.setData({ clubheight: this.data.clubItem.length * 560 })
-    // console.log(this.data.clubheight);
+    this.setData({ clubheight: this.data.all.length * 560 })
   },
 
   switchTab(event) {
     var cur = event.detail.current;
+    if(cur === 0){
+      this.setData({ clubheight: this.data.all.length * 600 })
+    }else if(cur === 1){
+      this.setData({ clubheight: this.data.hobby.length * 600 })
+    }else if(cur === 2){
+      this.setData({ clubheight: this.data.game.length * 600 })
+    }else if(cur === 3){
+      this.setData({ clubheight: this.data.art.length * 600 })
+    }else if(cur === 4){
+      this.setData({ clubheight: this.data.organ.length * 600 })
+    }else if(cur === 5){
+      this.setData({ clubheight: this.data.volun.length * 600 })
+    }else if(cur === 6){
+      this.setData({ clubheight: this.data.comic.length * 600 })
+    }else if(cur === 7){
+      this.setData({ clubheight: this.data.study.length * 600 })
+    }else if(cur === 8){
+      this.setData({ clubheight: this.data.sport.length * 600 })
+    }
+    
+    // console.log(this.data.clubheight)
     this.setData({
       currentIndexNav: cur,
     });
@@ -184,20 +383,46 @@ Page({
     })
   },
 
-  getSwiperList() {
-    request({ url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata' })
+  getSwiperList(){
+    request({ 
+      url: '/clubswiperlist'
+    })
       .then(result => {
         this.setData({
-          swiperList: result.data.message
+          swiperList: result.data.swiperList
         })
-
       })
   },
+
+  getClub() {
+    request({ 
+      url: '/userclubcate'
+    })
+      .then(res => {
+        this.setData({
+          all:res.data.all,
+          hobby:res.data.hobby,
+          game:res.data.game,
+          art:res.data.art,
+          organ:res.data.organ,
+          volun:res.data.volun,
+          comic:res.data.comic,
+          study:res.data.study,
+          sport:res.data.sport
+        })
+      })
+  },
+
+
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.getSwiperList()
+    // this.getClub()
     this.calcHeight()
     this.setcHeight()
   },
@@ -213,6 +438,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.getClub()
     // this.goTop()
     // this.calcHeight()
     // console.log(getApp().globalData.clubtab)

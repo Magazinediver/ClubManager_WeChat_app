@@ -1,3 +1,4 @@
+import { request } from "../../request/index.js"
 // pages/search/search.js
 Page({
 
@@ -6,9 +7,8 @@ Page({
    */
   data: {
     currentTab: 0,
-    queryInfo:{
-      value: ''
-    },
+    query:'',
+   
     hot:[
       '棋社','演讲','比赛','竞赛','乒乓','篮球','足球','动漫'
     ],
@@ -96,7 +96,7 @@ Page({
     });
   },
   onSearch() {
-    getSearchList()
+    this.getSearchList()
   },
 
 
@@ -117,13 +117,19 @@ Page({
       currentTab: cur,
     });
   },
-  // getSearchList() {
-  //   request({ url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata' })
-  //     .then(result => {
-  //       this.setData({
-  //         searchList: result.data.message
-  //       })
-  //     })
-  // },
+
+
+  getSearchList() {
+    request({ url: '/search',
+    data:{
+      query:this.data.query
+    }
+    })
+      .then(result => {
+        this.setData({
+          searchList: result.data.searchList
+        })
+      })
+  },
  
 })

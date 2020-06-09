@@ -1,6 +1,6 @@
 <view class="container">
   <navigator 
-  url="/pages/activitypage/activitypage"
+  url="/pages/activitypage/activitypage?activityid={{item.id}}"
   class="activity_tab" 
   wx:for="{{activityitem}}" 
   wx:key="index"

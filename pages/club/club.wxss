@@ -36,7 +36,7 @@
 }
 .index_swiper swiper {
   width: 750rpx;
-  height: 340rpx;
+  height: 400rpx;
 }
 .index_swiper swiper image {
   width: 100%;
