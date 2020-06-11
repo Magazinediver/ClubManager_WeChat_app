@@ -7,7 +7,9 @@ Page({
     clubheight: 0,//社团部分高度计算结果
     activityheight: 0,//活动部分高度计算结果
     currentTab: 0,//当前选中的tab
-    swiperList: [],//轮播图
+    swiperList: [
+     
+    ],//轮播图
     cateList: [],
     cateList1: [ //分类第一行
       {
@@ -210,11 +212,11 @@ Page({
 
   getSwiperList() {
     request({ 
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata'
+      url: '/swiperlist'
     })
       .then(result => {
         this.setData({
-          swiperList: result.data.message
+          swiperList: result.data.data.pic
         })
       })
   },
@@ -225,7 +227,7 @@ Page({
     })
       .then(result => {
         this.setData({
-          activityItem: result.data.activityItem
+          activityItem: result.data.data.activityItem
         })
       })
   },
@@ -236,7 +238,7 @@ Page({
     })
       .then(result => {
         this.setData({
-          clubItem: result.data.clubItem
+          clubItem: result.data.data.clubItem
         })
       })
   },

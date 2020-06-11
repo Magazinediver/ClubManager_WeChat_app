@@ -14,25 +14,26 @@
     <view class="club-container">
       <view class="club_item_content">
         <view class="club_item_iconandtitle">
-          <view class="club_item_title">{{clubItem.name}}</view>
-          <view class="club_item_icon">{{clubItem.tag}}</view>
+          <view class="club_item_title">{{clubItem.clubname}}</view>
+          <view class="club_item_icon">十佳社团</view>
         </view>
         <view class="club_item">
           <view class="club_item_member">成员:{{clubItem.member}}</view>
           <view class="club_item_fans">粉丝数:{{clubItem.fans}}</view>
         </view>
         <view class="club_item_tab">
-          <view class="club_item_tab1">{{clubItem.tips[0]}}</view>
-          <view class="club_item_tab2">
+          <view class="club_item_tab1">{{clubItem.type}}</view>
+          <!-- <view class="club_item_tab2">
             <text>{{clubItem.tips[1]}}</text>
           </view>
           <view class="club_item_tab3">
             <text>{{clubItem.tips[2]}}</text>
-          </view>
+          </view> -->
         </view>
       </view>
       <view class="club_item_pic">
-        <image class="club_item_pic_image" src="https://ae01.alicdn.com/kf/H307f710dbd6c4371aeeedd9cd4941d0ca.jpg" />
+        <!-- <image class="club_item_pic_image" src="https://ae01.alicdn.com/kf/H307f710dbd6c4371aeeedd9cd4941d0ca.jpg" /> -->
+        <image class="club_item_pic_image" src="{{clubItem.poster}}" />
       </view>
       <view class="club_describe">{{clubItem.describe}}</view>
     </view>

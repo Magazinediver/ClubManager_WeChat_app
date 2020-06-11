@@ -158,7 +158,9 @@ Page({
 
   switchTab(event) {
     var cur = event.detail.current;
-
+    this.setData({
+      currentIndexNav: cur,
+    });
     if(cur === 0){
       this.setData({ activityheight: this.data.all.length * 750 })
     }else if(cur === 1){
@@ -171,9 +173,7 @@ Page({
       this.setData({ activityheight: this.data.sports.length * 750 })
     }
 
-    this.setData({
-      currentIndexNav: cur,
-    });
+   
   },
 
   goTop: function (e) {  // 一键回到顶部
@@ -222,7 +222,7 @@ Page({
     })
       .then(result => {
         this.setData({
-          swiperList: result.data.swiperList
+          swiperList: result.data.data.pic
         })
       })
   },
@@ -233,11 +233,11 @@ Page({
     })
       .then(result => {
         this.setData({
-          all:result.data.all,
-          hobby:result.data.hobby,
-          study:result.data.study,
-          charity:result.data.charity,
-          sports:result.data.sports
+          all:result.data.data.all,
+          hobby:result.data.data.hobby,
+          study:result.data.data.study,
+          charity:result.data.data.charity,
+          sports:result.data.data.sports
 
         })
       })

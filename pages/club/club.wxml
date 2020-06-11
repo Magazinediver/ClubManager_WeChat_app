@@ -30,7 +30,7 @@
         wx:key="index"
       >
         <navigator>
-          <image mode="widthFix" src="{{item}}" />
+          <image mode="heightFix" src="{{item}}" />
         </navigator>
       </swiper-item>
     </swiper>

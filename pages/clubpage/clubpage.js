@@ -1,4 +1,6 @@
 // pages/clubpage/clubpage.js
+import { request } from "../../request/index.js"
+
 Page({
   data: {
     clubname:'',
@@ -51,6 +53,7 @@ Page({
     // console.log(options)
     
     let i = options.clubname
+   
     // console.log(i);
     
     this.setData({
@@ -58,20 +61,31 @@ Page({
     })
 
     this.getData()
-    // console.log(this.data.clubname);
+    console.log(this.data.clubname);
   },
   
   join(){
     request({ 
-      url: '/joinclub'
+      url: '/joinclub',
+      data:{
+        clubname:this.data.clubname
+      }
     })
       .then(result => {
-        
+        if(result.data.meta.status !== 200){
+          wx.showToast({
+            icon: 'none',
+            title: '请勿再次申请',
+            duration: 2000//持续的时间
+       
+          })
+        }
       })
 
   },
 
   getData() {
+    console.log(this.data.clubname)
     request({ 
       url: '/clubdetail',
       data:{
@@ -80,9 +94,9 @@ Page({
     })
       .then(result => {
         this.setData({
-          userpic: result.data.userpic,
-          clubItem: result.data.clubItem,
-          activityItem: result.data.activityItem
+          userpic: result.data.data.userpic,
+          clubItem: result.data.data.clubItem,
+          activityItem: result.data.data.activityItem
         })
       })
   },

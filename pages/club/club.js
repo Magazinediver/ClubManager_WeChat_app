@@ -19,10 +19,7 @@ Page({
     isFixedTop: false, //是否固定顶部
 
     swiperList: [
-      'https://ae01.alicdn.com/kf/H06978a26753d4c07bf899f39aef2949bf.jpg',
-      'https://ae01.alicdn.com/kf/H54a7061e839f4d7c9ddc5679868b89f7l.jpg',
-      'https://ae01.alicdn.com/kf/H0fd06a63db814c67a6160bdd8fa1ea1ag.jpg',
-      'https://ae01.alicdn.com/kf/Hefdf7d749bdd46ef8f1685f87bd72b74E.jpg',
+      
     ],
     //被点击的导航条索引
     currentIndexNav: 0,
@@ -302,6 +299,10 @@ Page({
 
   switchTab(event) {
     var cur = event.detail.current;
+    this.setData({
+      currentIndexNav: cur,
+    });
+
     if(cur === 0){
       this.setData({ clubheight: this.data.all.length * 600 })
     }else if(cur === 1){
@@ -323,9 +324,7 @@ Page({
     }
     
     // console.log(this.data.clubheight)
-    this.setData({
-      currentIndexNav: cur,
-    });
+  
   },
 
 
@@ -388,9 +387,11 @@ Page({
       url: '/clubswiperlist'
     })
       .then(result => {
+        // console.log(result)
         this.setData({
-          swiperList: result.data.swiperList
+          swiperList: result.data.data.pic
         })
+        // console.log(this.data.swiperList)
       })
   },
 
@@ -400,15 +401,15 @@ Page({
     })
       .then(res => {
         this.setData({
-          all:res.data.all,
-          hobby:res.data.hobby,
-          game:res.data.game,
-          art:res.data.art,
-          organ:res.data.organ,
-          volun:res.data.volun,
-          comic:res.data.comic,
-          study:res.data.study,
-          sport:res.data.sport
+          all:res.data.data.all,
+          hobby:res.data.data.hobby,
+          game:res.data.data.game,
+          art:res.data.data.art,
+          organ:res.data.data.organ,
+          volun:res.data.data.volun,
+          comic:res.data.data.comic,
+          study:res.data.data.study,
+          sport:res.data.data.sport
         })
       })
   },

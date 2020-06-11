@@ -17,7 +17,7 @@
         <!-- <image class="toutu" src="https://ae01.alicdn.com/kf/H307f710dbd6c4371aeeedd9cd4941d0ca.jpg" /> -->
         <van-panel  use-footer-slot>
           <view slot="header" class="header-jianjie">
-            <view class="title">{{activityItem.title}}</view>
+            <view class="title">{{activityItem.name}}</view>
             <view class="status">{{activityItem.status}}</view>
           </view>
           <view class="divider"></view>
@@ -27,7 +27,7 @@
               <view class="address">· 活动地址: {{activityItem.address}}</view>
               <view class="time">· 活动时间: {{activityItem.time}}</view>
               <view class="contact">· 联系人: {{activityItem.contact}}</view>
-              <view class="club">· 主办社团: {{activityItem.club}}</view>
+              <view class="club">· 主办社团: {{clubItem.clubname}}</view>
             </view>
            
           </view>
@@ -58,10 +58,10 @@
             <view class="club_item_content">
               <view class="club_item_iconandtitle">
                 <view class="club_item_title">
-                  {{clubItem.name}}
+                  {{clubItem.clubname}}
                 </view>
                 <view class="club_item_icon">
-                  {{clubItem.tag}}
+                  十佳社团
                 </view>
               </view>
               
@@ -76,14 +76,14 @@
               
               <view class="club_item_tab">
                 <view class="club_item_tab1">
-                  {{clubItem.tips[0]}}
+                  {{clubItem.type}}
                 </view>
-                <view class="club_item_tab2">
+                <!-- <view class="club_item_tab2">
                   <text>{{clubItem.tips[1]}}</text>
                 </view>
                 <view class="club_item_tab3">
                   <text>{{clubItem.tips[2]}}</text>
-                </view>
+                </view> -->
               </view>
               
             </view>

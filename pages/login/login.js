@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userinfo:''
   },
 
   
@@ -38,17 +38,23 @@ Page({
         })
       },
     });
-     
-    let userinfo = wx.getStorageInfoSync("userinfo");
-    // console.log(userinfo)
-    request({ url: '/login',
-      data:userinfo
-    })
-    .then(res=> {
-      
-    })
     
     setTimeout(() => {
+      this.setData({
+        userinfo:wx.getStorageSync('userinfo')
+      })
+      console.log(wx.getStorageSync('userinfo'))
+      console.log(this.data.userinfo)
+      request({ url: '/login',
+        data:
+        {
+          nickName:this.data.userinfo.nickName,
+          avatarUrl:this.data.userinfo.avatarUrl
+        }
+      })
+      .then(res=> {
+        console.log(res)
+      })
       wx.switchTab({
         url: '/pages/index/index',
       });

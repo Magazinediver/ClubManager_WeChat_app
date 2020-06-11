@@ -25,11 +25,12 @@
 }
 .index_swiper swiper {
   width: 710rpx;
-  height: 320rpx;
+  height: 400rpx;
 }
-.index_swiper swiper image {
+.index_swiper swiper .swiper-image {
+  width: 710rpx;
+  height: 400rpx;
   border-radius: 40rpx;
-  width: 100%;
 }
 .hot_club {
   color: #ff3600;

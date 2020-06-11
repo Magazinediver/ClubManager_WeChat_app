@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    activityid:'',
+    activityid: '',
     active: 0,
     activityItem:{
       title:'我们一起开飞机',
@@ -31,25 +31,35 @@ Page({
 
 
   onLoad:function(options){
-    // console.log(options)
+   
     
     let i = options.activityid
-    // console.log(i);
+    console.log(options.activityid);
     
     this.setData({
       activityid : i
     })
-    // console.log(this.data.activityid);
+   
 
     this.getData()
   },
 
   join(){
     request({ 
-      url: '/joinactivity'
+      url: '/joinactivity',
+      data:{
+        activityid:this.data.activityid
+      }
     })
       .then(result => {
-        
+        if(result.data.meta.status !== 200){
+          wx.showToast({
+            icon: 'none',
+            title: '请勿再次申请',
+            duration: 2000//持续的时间
+       
+          })
+        }
       })
 
   },
@@ -63,8 +73,8 @@ Page({
     })
       .then(result => {
         this.setData({
-          clubItem: result.data.clubItem,
-          activityItem: result.data.activityItem
+          clubItem: result.data.data.clubItem,
+          activityItem: result.data.data.activityItem
         })
       })
   },

@@ -1,9 +1,11 @@
 <view class="search">
   <van-search
-    value="{{ value }}"
+    value="{{ query }}"
     placeholder="请输入搜索关键词"
     show-action
     shape="round"
+    bind:change="onChange"
+    data-prop="query"
     bind:search="onSearch"
     bind:cancel="onCancel"
     class="search_input"

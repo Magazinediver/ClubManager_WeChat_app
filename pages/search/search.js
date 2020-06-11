@@ -92,8 +92,8 @@ Page({
 
   onChange(e) {
     this.setData({
-      value: e.detail,
-    });
+      [e.currentTarget.dataset.prop] : e.detail
+    })
   },
   onSearch() {
     this.getSearchList()

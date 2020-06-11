@@ -15,7 +15,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "傻逼标题栏",
+    "navigationBarTitleText": "社团家",
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {
