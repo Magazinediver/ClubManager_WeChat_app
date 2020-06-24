@@ -63,13 +63,7 @@
         <text slot="icon" class="iconfont icon-A"></text>
         <text slot="title" class="slot_text">我的关注</text>
       </van-cell>
-      <van-cell
-        is-link
-        link-type="navigateTo"
-        url="/pages/dashboard/index">
-        <text slot="icon" class="iconfont icon-pinglun"></text>
-        <text slot="title" class="slot_text">我的评论</text>
-      </van-cell>
+      
     </van-cell-group>
     <van-cell
       is-link

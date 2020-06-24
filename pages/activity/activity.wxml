@@ -29,7 +29,7 @@
         wx:key="index"
       >
         <navigator>
-          <image mode="widthFix" src="{{item}}" />
+          <image mode="scaleToFill" src="{{item}}" />
         </navigator>
       </swiper-item>
     </swiper>

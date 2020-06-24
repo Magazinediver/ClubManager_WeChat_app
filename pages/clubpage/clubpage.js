@@ -7,13 +7,7 @@ Page({
     
 
     userpic:[
-      'https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg',
-      'https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg',
-      'https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg',
-      'https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg',
-      'https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg',
-      'https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg',
-      'https://ae01.alicdn.com/kf/H7b4974ddc8294b3882d63b61e4e4cdc3a.jpg',
+    
     ],
     clubItem:
     {
@@ -79,7 +73,14 @@ Page({
             duration: 2000//持续的时间
        
           })
+          return null
         }
+        wx.showToast({
+          icon: 'none',
+          title: '申请提交',
+          duration: 2000//持续的时间
+     
+        })
       })
 
   },

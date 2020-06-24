@@ -18,7 +18,7 @@ Page({
     wx.setStorageSync("userinfo",userInfo);
     wx.login({
       success: (res)=>{
-        console.log("res.code:" + res.code);
+        console.log("res.code这个:" + res.code);
         wx.request({
           url: 'https://api.weixin.qq.com/sns/jscode2session',
           data: {

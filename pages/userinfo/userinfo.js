@@ -21,10 +21,10 @@ Page({
     
     wx.setStorageSync("name", this.data.name);
     wx.setStorageSync("id", this.data.id);
-    request({ url: '/userinfo',
+    request({ url: '/changeinfo',
       data:{
-        name:this.name,
-        id:this.id
+        name:this.data.name,
+        id:this.data.id
       }
     })
       .then(res => {

@@ -32,14 +32,15 @@
   background-color: #f2f2f2;
 }
 .index_swiper {
-  background-color: #ffe609;
+  background-color: #ccc;
 }
 .index_swiper swiper {
   width: 750rpx;
   height: 400rpx;
 }
 .index_swiper swiper image {
-  width: 100%;
+  width: 750rpx;
+  height: 400rpx;
 }
 .navbar-wrap {
   width: 100%;

@@ -11,7 +11,7 @@
           {{item.name}}
         </view>
         <view class="club_item_icon">
-          {{item.tag}}
+          十佳社团
         </view>
       </view>
       
@@ -26,19 +26,19 @@
       
       <view class="club_item_tab">
         <view class="club_item_tab1">
-          {{item.tips[0]}}
+          {{item.type}}
         </view>
-        <view class="club_item_tab2">
+        <!-- <view class="club_item_tab2">
           <text>{{item.tips[1]}}</text>
         </view>
         <view class="club_item_tab3">
           <text>{{item.tips[2]}}</text>
-        </view>
+        </view> -->
       </view>
       
     </view>
     <view class="club_item_pic">
-      <image class="club_item_pic_image" src="https://ae01.alicdn.com/kf/H307f710dbd6c4371aeeedd9cd4941d0ca.jpg" />
+      <image class="club_item_pic_image" src="{{item.poster}}" />
     </view>
     <view class="club_describe">
       {{item.describe}}

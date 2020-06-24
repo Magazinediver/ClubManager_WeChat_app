@@ -18,110 +18,17 @@ Page({
     isFixedTop: false, //是否固定顶部
 
     swiperList: [
-      'https://ae01.alicdn.com/kf/H06978a26753d4c07bf899f39aef2949bf.jpg',
-      'https://ae01.alicdn.com/kf/H54a7061e839f4d7c9ddc5679868b89f7l.jpg',
-      'https://ae01.alicdn.com/kf/H0fd06a63db814c67a6160bdd8fa1ea1ag.jpg',
-      'https://ae01.alicdn.com/kf/Hefdf7d749bdd46ef8f1685f87bd72b74E.jpg',
+      
     ],
     //被点击的导航条索引
     currentIndexNav: 0,
     //导航条数据
-    all: [{
-      id: '1',
-      name: '义务维修会',
-      pic: 'https://ae01.alicdn.com/kf/H02612ad5ca404b42955d6e6a3a037694r.jpg',
-      time: '2019年11月24日 9:00～11:00',
-      address: '教四一楼',
-      status: '火热报名中！'
-    },
-    {
-      id: '2',
-      name: '招新游园会',
-      pic: 'https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg',
-      time: '2019年11月20日 9:00～19:00',
-      address: '北校区音乐广场',
-      status: '报名已截止'
-    }
+    all: [
     ],
-    hobby:[{
-      id: '3',
-      name: '义务维修会',
-      pic: 'https://ae01.alicdn.com/kf/H02612ad5ca404b42955d6e6a3a037694r.jpg',
-      time: '2019年11月24日 9:00～11:00',
-      address: '教四一楼',
-      status: '火热报名中！'
-    },
-    {
-      id: '4',
-      name: '招新游园会',
-      pic: 'https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg',
-      time: '2019年11月20日 9:00～19:00',
-      address: '北校区音乐广场',
-      status: '报名已截止'
-    },{
-      id: '1',
-      name: '义务维修会',
-      pic: 'https://ae01.alicdn.com/kf/H02612ad5ca404b42955d6e6a3a037694r.jpg',
-      time: '2019年11月24日 9:00～11:00',
-      address: '教四一楼',
-      status: '火热报名中！'
-    },
-    {
-      id: '1',
-      name: '招新游园会',
-      pic: 'https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg',
-      time: '2019年11月20日 9:00～19:00',
-      address: '北校区音乐广场',
-      status: '报名已截止'
-    }],
-    study:[{
-      id: '1',
-      name: '义务维修会',
-      pic: 'https://ae01.alicdn.com/kf/H02612ad5ca404b42955d6e6a3a037694r.jpg',
-      time: '2019年11月24日 9:00～11:00',
-      address: '教四一楼',
-      status: '火热报名中！'
-    },
-    {
-      id: '1',
-      name: '招新游园会',
-      pic: 'https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg',
-      time: '2019年11月20日 9:00～19:00',
-      address: '北校区音乐广场',
-      status: '报名已截止'
-    }],
-    charity:[{
-      id: '1',
-      name: '义务维修会',
-      pic: 'https://ae01.alicdn.com/kf/H02612ad5ca404b42955d6e6a3a037694r.jpg',
-      time: '2019年11月24日 9:00～11:00',
-      address: '教四一楼',
-      status: '火热报名中！'
-    },
-    {
-      id: '1',
-      name: '招新游园会',
-      pic: 'https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg',
-      time: '2019年11月20日 9:00～19:00',
-      address: '北校区音乐广场',
-      status: '报名已截止'
-    }],
-    sports:[{
-      id: '1',
-      name: '义务维修会',
-      pic: 'https://ae01.alicdn.com/kf/H02612ad5ca404b42955d6e6a3a037694r.jpg',
-      time: '2019年11月24日 9:00～11:00',
-      address: '教四一楼',
-      status: '火热报名中！'
-    },
-    {
-      id: '1',
-      name: '招新游园会',
-      pic: 'https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg',
-      time: '2019年11月20日 9:00～19:00',
-      address: '北校区音乐广场',
-      status: '报名已截止'
-    }],
+    hobby:[],
+    study:[],
+    charity:[],
+    sports:[],
 
     tabs: [{
       id: 0,
@@ -158,21 +65,25 @@ Page({
 
   switchTab(event) {
     var cur = event.detail.current;
-    this.setData({
-      currentIndexNav: cur,
-    });
-    if(cur === 0){
-      this.setData({ activityheight: this.data.all.length * 750 })
-    }else if(cur === 1){
-      this.setData({ activityheight: this.data.hobby.length * 750 })
-    }else if(cur === 2){
-      this.setData({ activityheight: this.data.study.length * 750 })
-    }else if(cur === 3){
-      this.setData({ activityheight: this.data.charity.length * 750 })
-    }else if(cur === 4){
-      this.setData({ activityheight: this.data.sports.length * 750 })
+    if(event.detail.source === 'touch'){
+      this.setData({
+        currentIndexNav: cur,
+      });
     }
-
+    // if(cur === 0){
+    //   this.setData({ activityheight: this.data.all.length * 750 })
+    // }else if(cur === 1){
+    //   this.setData({ activityheight: this.data.hobby.length * 750 })
+    // }else if(cur === 2){
+    //   this.setData({ activityheight: this.data.study.length * 750 })
+    // }else if(cur === 3){
+    //   this.setData({ activityheight: this.data.charity.length * 750 })
+    // }else if(cur === 4){
+    //   this.setData({ activityheight: this.data.sports.length * 750 })
+    // }
+    // if (this.data.activityheight < 1400){
+    //   this.setData({ activityheight: 1400 })
+    // }
    
   },
 
@@ -240,6 +151,7 @@ Page({
           sports:result.data.data.sports
 
         })
+        this.setaHeight()
       })
   },
   

@@ -30,7 +30,7 @@
         wx:key="index"
       >
         <navigator>
-          <image mode="heightFix" src="{{item}}" />
+          <image mode="scaleToFill" src="{{item}}" />
         </navigator>
       </swiper-item>
     </swiper>
@@ -66,7 +66,7 @@
   <!-- <ActivityItem activityitem="{{activityItem}}"></ActivityItem> -->
   <!-- <ClubItem clubitem="{{clubItem}}"></ClubItem> -->
 
-  <swiper current="{{currentIndexNav}}" class="tab-box" style="height:{{clubheight}}rpx" duration="300" bindchange="switchTab">
+  <swiper current="{{currentIndexNav}}" class="tab-box" style="height:{{clubheight}}rpx" duration="600" bindchange="switchTab">
     <swiper-item class="tab_content">
       <ClubItem clubitem="{{all}}"></ClubItem>
     </swiper-item>

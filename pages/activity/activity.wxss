@@ -34,7 +34,8 @@
   height: 400rpx;
 }
 .index_swiper swiper image {
-  width: 100%;
+  width: 750rpx;
+  height: 400rpx;
 }
 .navbar-wrap {
   width: 100%;
