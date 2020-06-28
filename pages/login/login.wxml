@@ -6,9 +6,9 @@
 
 <button class="login_button" style="width: 680rpx;height: 90rpx;" open-type="getUserInfo" bindgetuserinfo="handlegetUserInfo"> 社团家登录 </button>
 
-<view class="register"> 新用户注册 </view>
+<view class="register"> 欢迎使用城市学院社团管理系统 </view>
 
 <view class="login_contract"> 
   <text class="login_con_1" >登录代表您已同意</text>
-  <text class="login_con_2" >社团家用户协议、隐私协议</text>
+  <text class="login_con_2" >将自己的用户信息用于学校管理社团</text>
 </view>

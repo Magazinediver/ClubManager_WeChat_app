@@ -2,7 +2,7 @@
   <view class="back" slot="left" bind:click="goback">
     <van-icon class="icon" size="50rpx" name="arrow-left" bind:click="goback" />
   </view>
-  <view slot="right" class="follow">关注</view>
+  <view slot="right" class="follow" bindtap="subscribe">关注</view>
 </NavBar>
 <image src='https://ae01.alicdn.com/kf/H11d9eb39fe6945cd8479a49d124a94a0s.jpg' class='goTop' bindtap="join"></image>
 <image mode="scaleToFill" class="image" src="https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg" />
@@ -68,7 +68,7 @@
         </van-cell>
         <view class="activity-container">
           <navigator class="activity_tab" wx:for="{{activityItem}}" wx:key="index"
-            url="/pages/activitypage/activitypage?activityid={{item.id}}"
+            url="/pages/activitypage/activitypage?activityid={{item.activityid}}"
           >
             <view class="activity_img">
               <image class="activity_image" mode="widthFix" src="{{item.pic}}" />

@@ -3,6 +3,6 @@
     "van-button": "@vant/weapp/button/index"
   },
   "navigationBarBackgroundColor": "#ffc609",
-  "navigationBarTitleText": "我的社团",
+  "navigationBarTitleText": "我的关注",
   "navigationBarTextStyle": "black"
 }

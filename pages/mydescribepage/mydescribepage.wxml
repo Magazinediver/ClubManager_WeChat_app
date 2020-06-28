@@ -36,6 +36,6 @@
       </view>
       
     </view>
-    <van-button class="club_item_button" type="default" size="mini"  color="#ffc609" data-cid="{{item.name}}" catchtap="quitclub" plain>退出社团</van-button>
+    <van-button class="club_item_button" type="default" size="mini"  color="#ffc609" data-cid="{{item.name}}" catchtap="undesclub" plain>不再关注</van-button>
    
   </navigator>

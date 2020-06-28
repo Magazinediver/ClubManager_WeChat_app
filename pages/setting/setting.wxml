@@ -21,19 +21,19 @@
   <van-row>
     <van-col span="8">
       <view class="set_tab">
-        <view class="tab_num">0</view>
+        <view class="tab_num">{{club}}</view>
         <view class="tab_text">社团</view>
       </view>
     </van-col>
     <van-col span="8">
       <view class="set_tab">
-        <view class="tab_num">0</view>
+        <view class="tab_num">{{subscribe}}</view>
         <view class="tab_text">关注</view>
       </view>
     </van-col>
     <van-col span="8">
       <view class="set_tab">
-        <view class="tab_num">0</view>
+        <view class="tab_num">{{activity}}</view>
         <view class="tab_text">活动数</view>
       </view>
     </van-col>
@@ -59,7 +59,7 @@
       <van-cell
         is-link
         link-type="navigateTo"
-        url="/pages/dashboard/index">
+        url="/pages/mydescribepage/mydescribepage">
         <text slot="icon" class="iconfont icon-A"></text>
         <text slot="title" class="slot_text">我的关注</text>
       </van-cell>

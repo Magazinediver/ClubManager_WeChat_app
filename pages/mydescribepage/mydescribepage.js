@@ -7,10 +7,10 @@ Page({
       
     ]
   },
-  quitclub(e){
+  undesclub(e){
     // console.log(e.currentTarget.dataset.cid)
     request({ 
-      url: '/withdrawclub',
+      url: '/delcollection',
       data:{
         clubname:e.currentTarget.dataset.cid
       }
@@ -19,7 +19,7 @@ Page({
         if(result.data.meta.status !== 200){
           wx.showToast({
             icon: 'none',
-            title: '退出社团失败',
+            title: '取消关注失败',
             duration: 2000//持续的时间
        
           })
@@ -27,7 +27,7 @@ Page({
         }
         wx.showToast({
           icon: 'none',
-          title: '退出社团成功',
+          title: '取消关注成功',
           duration: 2000//持续的时间
      
         })
@@ -38,9 +38,19 @@ Page({
   onLoad: function (options) {
     this.getUserClubList()
   },
+  // getUserClubList(){
+  //   request({ 
+  //     url: '/userclub',
+  //   })
+  //     .then(result => {
+  //       this.setData({
+  //         clubItem: result.data.data.clubItem
+  //       })
+  //     })
+  // },
   getUserClubList(){
     request({ 
-      url: '/userclub',
+      url: '/searchcollection',
     })
       .then(result => {
         this.setData({

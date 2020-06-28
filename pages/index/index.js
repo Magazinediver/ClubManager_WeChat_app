@@ -106,6 +106,8 @@ Page({
 
   onShow(){
     this.getUserClubList()
+    this.getSwiperList()
+   
     this.getUserActivityList()
 
     // this.setcHeight()

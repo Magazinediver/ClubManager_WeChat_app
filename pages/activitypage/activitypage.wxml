@@ -2,7 +2,7 @@
   <image 
     mode="aspectFit"
     class="top-image" 
-    src="https://ae01.alicdn.com/kf/Haa558f3ca46f4c698b647d73fc6460997.jpg" 
+    src="{{activityItem.pic}}" 
   />
   <view class="join">
     <view class="join-button" bindtap="join">
@@ -54,7 +54,9 @@
       <!-- 社团 -->
       <van-tab class="tab" title="社团">
         <navigator
-          class="index_club_tab">
+          class="index_club_tab"
+          url="/pages/clubpage/clubpage?clubname={{clubItem.clubname}}"
+          >
             <view class="club_item_content">
               <view class="club_item_iconandtitle">
                 <view class="club_item_title">
@@ -88,7 +90,7 @@
               
             </view>
             <view class="club_item_pic">
-              <image class="club_item_pic_image" src="https://ae01.alicdn.com/kf/H307f710dbd6c4371aeeedd9cd4941d0ca.jpg" />
+              <image class="club_item_pic_image" src="{{clubItem.poster}}" />
             </view>
             <view class="club_describe">
               {{clubItem.describe}}

@@ -10,7 +10,8 @@
     "pages/clubpage/clubpage",
     "pages/myactivity/myactivity",
     "pages/myclub/myclub",
-    "pages/userinfo/userinfo"
+    "pages/userinfo/userinfo",
+    "pages/mydescribepage/mydescribepage"
   ],
   "window": {
     "backgroundTextStyle": "light",
